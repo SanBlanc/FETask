@@ -1,0 +1,159 @@
+/* function
+*/
+header {
+  max-height: 60px;
+  background-color: #333333;
+  padding: 0 calc(4% / 2);
+  overflow: hidden;
+  font-size: 14px; }
+  header h1 {
+    min-width: 128px;
+    min-height: 60px;
+    display: inline-block;
+    background: url("../img/baidu.png") left center no-repeat; }
+  header nav {
+    float: right; }
+    header nav a {
+      line-height: 60px;
+      color: #DBDAD8; }
+      header nav a:not(:first-child) {
+        margin-left: 14px; }
+      header nav a:last-child {
+        color: #AAA39B;
+        text-decoration: underline; }
+      header nav a:hover {
+        text-decoration: underline; }
+
+footer {
+  min-height: 72px;
+  padding: 0 calc(4% / 2);
+  color: #DBDAD8;
+  background-color: #333333;
+  line-height: 72px;
+  text-align: center;
+  font-size: 14px; }
+
+main {
+  overflow: hidden;
+  padding: 32px calc(4% / 2);
+  background-color: #DEDEDE; }
+  main img {
+    max-width: 200px; }
+  main article, main aside {
+    background-color: #ffffff;
+    padding: 20px;
+    outline: 1px solid #CDCDCD; }
+  main article {
+    margin-bottom: 20px; }
+  main small {
+    display: block; }
+  main a {
+    color: #0006E5;
+    text-decoration: underline; }
+  main img {
+    margin-left: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 10px; }
+  main h2 {
+    line-height: 2;
+    font-size: 18px;
+    color: #333333;
+    margin: 8px 0; }
+  main h3 {
+    line-height: 1.5;
+    font-size: 16px;
+    margin-bottom: 6px;
+    color: #666666; }
+  main small {
+    color: gray;
+    margin-bottom: 12px; }
+  main p {
+    text-indent: 2em;
+    line-height: 1.5; }
+  main ul li {
+    text-indent: 2em;
+    line-height: 1.5; }
+  main dl {
+    outline: 1px solid #CDCDCD;
+    width: 220px;
+    text-align: center; }
+    main dl:not(:last-of-type) {
+      margin-bottom: 20px; }
+    main dl img {
+      margin-left: 10px; }
+    main dl dt {
+      padding-top: 10px; }
+  main article:last-of-type {
+    line-height: 1.5; }
+    main article:last-of-type p {
+      text-indent: 0; }
+    main article:last-of-type ol {
+      list-style-type: decimal;
+      margin-left: 2em; }
+    main article:last-of-type table {
+      width: 100%;
+      border-collapse: collapse; }
+      main article:last-of-type table th {
+        background-color: #333333;
+        color: #ffffff; }
+      main article:last-of-type table td, main article:last-of-type table th {
+        text-align: left;
+        border: 1px solid #CDCDCD;
+        line-height: 2;
+        padding-left: .5em; }
+      main article:last-of-type table tr:last-of-type td {
+        background-color: #CCCCCC;
+        font-weight: bold; }
+  main aside h2 {
+    margin-top: 0;
+    text-indent: 2em;
+    border-left: 5px solid #CDCDCD; }
+  main aside small {
+    margin-bottom: 0; }
+  main aside form {
+    font-size: 0;
+    letter-spacing: -3px; }
+    main aside form textarea {
+      resize: none; }
+    main aside form input[type="submit"] {
+      font-size: 16px;
+      width: 100%;
+      border-radius: 6px;
+      height: 36px;
+      line-height: 32px;
+      background-color: #3355D0;
+      color: #ffffff;
+      letter-spacing: 2px; }
+      main aside form input[type="submit"]:hover {
+        background-color: #5c78da; }
+    main aside form label, main aside form select, main aside form input, main aside form small {
+      font-size: 14px;
+      letter-spacing: 0;
+      line-height: 1.5; }
+    main aside form small {
+      margin-left: calc(30% + 10px); }
+    main aside form label {
+      display: inline-block;
+      width: 30%;
+      text-align: right;
+      font-size: 14px;
+      letter-spacing: 0;
+      margin-right: 10px; }
+      main aside form label:not(:first-of-type) {
+        margin-top: 10px; }
+    main aside form textarea {
+      width: 30%;
+      vertical-align: top;
+      margin-top: 10px;
+      margin-bottom: 10px; }
+    main aside form .txt-lb {
+      display: inline;
+      margin-left: .2em; }
+    main aside form input[type="text"] {
+      padding-top: .2em;
+      padding-right: 0;
+      padding-bottom: .2em;
+      padding-left: .2em; }
+
+/*# sourceMappingURL=layout.css.map */

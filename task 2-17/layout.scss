@@ -1,0 +1,23 @@
+ul,li{
+  marign:0;
+  padding:0;
+}
+
+.chart{
+  //position:absolute;
+  font-size:0;
+  width:1000px;
+  height:600px;
+  min-height: min-content;
+  margin:50px auto;
+  background-color: #dcdcdc;
+}
+.chart-item{
+  display: inline-block;
+  //margin-left:5px;
+}
+.aqi-chart-wrap{
+  width:90%;
+  margin:50px auto;
+
+}

@@ -1,0 +1,208 @@
+/**
+ *variables
+*/
+/**
+*golbal settings
+*/
+html, body {
+  height: 100%;
+  font-size: 10px; }
+
+header, nav ul, .art-context ul {
+  font-size: 0;
+  letter-spacing: -4px; }
+
+header span, header h1, nav ul li, .art-context ul li {
+  font-size: 1.6rem;
+  letter-spacing: 0;
+  vertical-align: top; }
+
+/**
+* ==header
+*/
+header {
+  height: 6rem;
+  line-height: 6rem;
+  color: #ffffff;
+  background-color: #91D4DA; }
+  header span, header h1 {
+    display: inline-block;
+    max-height: 100%; }
+  header span {
+    font-size: 18pt;
+    text-indent: 2rem;
+    width: 6rem;
+    margin-left: 2rem;
+    background: url("imgs/back.svg") left center no-repeat;
+    background-size: 1.8rem 1.8rem; }
+  header h1 {
+    text-align: center;
+    font-size: 24pt;
+    text-indent: -4rem;
+    width: calc(100% - 8rem); }
+
+/**
+* ==nav
+*/
+nav {
+  height: 5rem;
+  background-color: #fff;
+  line-height: 5rem; }
+  nav ul {
+    text-align: center; }
+    nav ul li {
+      display: inline-block;
+      font-size: 22pt;
+      border-bottom: 4px solid #ffffff;
+      width: 20%; }
+      nav ul li:hover {
+        border-bottom-color: #91D4DA; }
+      nav ul li a {
+        display: block; }
+
+.banner-img {
+  background: url("imgs/img.jpg") center center no-repeat;
+  min-height: 41.6rem;
+  background-size: 100%; }
+
+.tab-tools {
+  width: 96%;
+  margin: 0 auto;
+  border-bottom: 1px solid #DEDEDE; }
+  .tab-tools dl {
+    margin-left: -4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    height: 12rem;
+    width: 20%;
+    text-align: center; }
+    .tab-tools dl dt {
+      width: 4.8rem;
+      height: 4.8rem;
+      background: #91D4DA url("imgs/tab-list.svg") center center no-repeat;
+      background-size: 3.8rem 3.8rem;
+      border-radius: 100%; }
+    .tab-tools dl dd {
+      font-size: 16pt;
+      color: #333333;
+      min-width: 100%;
+      margin-top: -3rem; }
+
+.column-list {
+  height: 18rem;
+  padding-top: 2rem;
+  border-bottom: 2rem solid #F5F5F5; }
+  .column-list dl {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 33%;
+    border-right: 1px solid #DEDEDE; }
+    .column-list dl:last-of-type {
+      border-right: none; }
+    .column-list dl dt {
+      width: 4rem;
+      height: 8rem;
+      background: url("imgs/6.png") top center no-repeat;
+      background-size: 100%; }
+    .column-list dl dd {
+      text-align: center;
+      min-width: 100%; }
+      .column-list dl dd:first-of-type {
+        font-size: 22pt;
+        color: #333333;
+        margin-bottom: 1rem; }
+      .column-list dl dd:last-of-type {
+        font-size: 18pt;
+        color: #636363; }
+
+section {
+  padding: 0 2rem;
+  vertical-align: top;
+  height: auto;
+  border-bottom: 2rem solid #DEDEDE; }
+  section h2 {
+    font-size: 22pt;
+    height: 6rem;
+    line-height: 6rem;
+    border-bottom: 1px solid #F5F5F5; }
+  section .article-img {
+    display: inline-block;
+    width: 20%;
+    height: auto;
+    padding: 2rem;
+    padding-left: 0;
+    border-bottom: 1px solid #FFB724;
+    position: relative;
+    z-index: 3; }
+    section .article-img img {
+      max-width: 100%;
+      outline: 2px solid #FFB724; }
+      section .article-img img:first-of-type {
+        margin-bottom: 2rem; }
+  section ul {
+    vertical-align: top;
+    margin-top: 2rem;
+    margin-left: -4px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: calc(80% - 40px); }
+    section ul li {
+      vertical-align: top;
+      width: 45%;
+      background-color: #F8F8F8;
+      font-size: 22pt;
+      height: 6rem;
+      line-height: 6rem;
+      text-align: center;
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+      color: #4B4B4B; }
+
+.article-list {
+  padding: 2rem;
+  border: 2px solid #DEDEDE; }
+  .article-list article {
+    background: url("imgs/1.jpg") left center no-repeat;
+    background-size: 30%;
+    height: 12rem; }
+    .article-list article:not(first-of-type) {
+      margin-top: 2rem; }
+    .article-list article h3, .article-list article small {
+      margin-left: calc(30% + 2rem); }
+    .article-list article h3 {
+      font-size: 22pt;
+      color: #636363;
+      line-height: 3.2rem;
+      margin-bottom: 1.5rem; }
+    .article-list article small {
+      font-size: 12pt;
+      color: #C6C6C6; }
+
+.art-context {
+  padding: 0 2rem; }
+  .art-context h2 {
+    font-size: 22pt;
+    height: 6rem;
+    line-height: 6rem; }
+  .art-context small {
+    font-size: 12pt;
+    line-height: 1.5rem;
+    color: #C6C6C6; }
+  .art-context ul {
+    width: 100%;
+    margin-bottom: 1.5rem; }
+    .art-context ul li {
+      width: 30%;
+      height: 30rem;
+      display: inline-block;
+      background: url("imgs/1.jpg") center center no-repeat; }
+      .art-context ul li:not(:last-of-type) {
+        margin-right: 2rem; }
+
+/*# sourceMappingURL=layout.css.map */

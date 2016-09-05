@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任务二十一：基础JavaScript练习（四）</title>
+    <style>
+
+        body{
+            background:#fafafa;
+            width:30%;
+            margin:20px auto;
+        }
+        ul,li{list-style: none;margin:0;padding:0;}
+        i{font-style: normal;}
+        textarea{
+            resize:none;
+        }
+        form{
+            vertical-align:bottom;
+        }
+        ul{
+            font-size: 0;
+            letter-spacing: -3px;
+            margin:10px 0;
+        }
+        .tag{
+            margin-bottom: 10px;
+        }
+        button{
+            margin:5px 0;
+        }
+        .item{
+            color:#fff;
+            font-size: 1rem;
+            letter-spacing: 0;
+            background-color:#85C8FF;
+            margin-right:5px;
+            line-height: 1.25;
+            display: inline-block;
+            padding:.3rem;
+            margin-bottom:.3rem;
+        }
+        .select{
+            background-color:#FB0301;
+            
+        }
+        #hobbyList .item{
+            background-color: #FFCB82;
+            font-size: 1rem;
+            letter-spacing: 0;
+            color:#fff;
+            margin-right:5px;
+            line-height: 1.25;
+            display: inline-block;
+            padding:.3rem;
+            margin-bottom:.3rem;
+        }
+    </style>
+</head>
+<body>
+<div class="tag">
+    <label>Tag：<input type="text" id="tagAddTxt"></label>
+    
+    <ul id="tagList">
+
+    </ul>
+</div>
+
+<form action="">
+    <textarea name="" cols="28" rows="6" id="hobbyTxt"></textarea>
+    <button id="addHobbyBtn">确定兴趣爱好</button>
+</form>
+<ul id="hobbyList">
+
+</ul>
+
+
+<script src="app.js"></script>
+</body>
+</html>

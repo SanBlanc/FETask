@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+/* variables 
+* map-get($map,$key)
+*/
+
+//max-width:min-content;
+//background-size:cover;
+
+/* placeholder  @extend
+*/
+
+
+
+/* mixin   @include
+*/
+
+
+//使用flex 让父容器中的项目元素居中
+@mixin flex-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+//清除浮动
+@mixin clearfix{
+    *zoom:1;
+    &:before,
+    &:after{
+        display: table;
+        content:"";
+    }
+    &:after{
+        clear:both;
+        overflow:hidden;
+    }
+}
+
+//居中
+@mixin center-box($direction: both) {
+    position: absolute;
+    @if $direction == both {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate3d(-50%, -50%, 0);
+        transform: translate3d(-50%, -50%, 0);
+    }
+    @else if $direction == horizontal {
+        left: 50%;
+        -webkit-transform: translate3d(-50%, 0, 0);
+        transform: translate3d(-50%, 0, 0);
+    }
+    @else if $direction == vertical {
+        top: 50%;
+        -webkit-transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%, 0);
+    }
+}
+
+
+/* function
+*/
+@function calc-width($col-span){
+    @return (100% / $col-span);
+}
+
+
+//用于二维map
+//@function map-has-nested-keys($map, $keys...) {
+//  @each $key in $keys {
+//    @if not map-has-key($map, $key) {
+//      @return false;
+//    }
+//    $map: map-get($map, $key);
+//  }
+//
+//  @return true;
+//}
+//@function map-deep-get($map, $keys...) {
+//  @each $key in $keys {
+//    $map: map-get($map, $key);
+//  }
+//  @return $map;
+//}
+
+//z-index 
+//$z-layers:(
+//    "default":1,
+//    "below":-1
+//);
+//demo 管理z-index
+//@function z($layers...) {
+//  @if not map-has-nested-keys($z-layers, $layers...) {
+//    @warn "No layer found for `#{inspect($layers...)}` in $z-layers map. Property omitted.";
+//  }
+//  @return map-deep-get($z-layers, $layers...);
+//}

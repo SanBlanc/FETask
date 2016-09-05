@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任务四：定位和居中问题</title>
+    <link rel="stylesheet" href="../../assets/reset.css">
+    <style>
+        .center-box{
+            background-color:#ccc;height: 200px;width: 400px;
+
+        }
+        .circle{
+            height:50px;
+            width:50px;
+            background-color: orange;
+            position: absolute;
+        }
+        .cir-top-left{
+            left: 0;top: 0;
+            border-bottom-right-radius: 50px;
+        }
+        .cir-btm-right{
+            bottom: 0;right: 0;
+            border-top-left-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="center-box">
+        <div class="circle cir-top-left"></div>
+        <div class="circle cir-btm-right"></div>
+    </div>
+</body>
+</html>

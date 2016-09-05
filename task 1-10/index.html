@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>flex布局</title>
+    <link rel="stylesheet" href="../../assets/reset.css"/>
+    <style>
+
+
+        @media screen and (max-width: 639px) {
+            .flex-container{
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+            }
+            .flex-4{
+                order: -1;/*被挤下的项目在上面*/
+            }
+        }
+
+        @media screen and (min-width: 640px) {
+            .flex-container {
+                display: flex;
+                justify-content: space-around;/* 项目贴着浏览器左右端，项目间间距为浏览器边间距的两倍 */
+                align-items: center;
+            }
+        }
+
+        /*.flex-container内以flex-开头的类 */
+       .flex-container > [class|="flex"] {
+            width: 150px;
+            border: 1px solid #f00;
+            align-content: center;
+            margin:20px;
+            text-align: center;
+
+        }
+
+        .flex-container .flex-1 {
+            height: 120px;
+            border-color: #0f0;
+        }
+
+        .flex-2 {
+            height: 100px;
+        }
+
+        .flex-3 {
+            height: 40px;
+        }
+
+        .flex-4 {
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<div class="flex-container">
+    <div class="flex-1">flex-1</div>
+    <div class="flex-2">flex-2</div>
+    <div class="flex-3">flex-3</div>
+    <div class="flex-4">flex-4</div>
+</div>
+</body>
+</html>

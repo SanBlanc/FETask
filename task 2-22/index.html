@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任务二十二：JavaScript和树（一）</title>
+    <style>
+        html, body {
+            margin: 0;
+            box-sizing: border-box;
+            padding: 1rem 2rem;
+        }
+
+        .btnBox {
+            margin-bottom: 1rem;
+            text-align: center
+        }
+
+        main {
+            display: flex;
+            /*justify-content: center;!*水平居中*!*/
+            /*align-items: center;!*垂直居中*!*/
+            outline: 2px solid #1b6d85;
+        }
+
+        main div {
+            display: inline-flex;
+            outline: 2px solid #1b6d85;
+            margin: 15px 10px;
+            background-color: #fff;
+            min-height: 4rem;
+            flex-basis: 50%;
+        }
+    </style>
+</head>
+<body>
+<div class="btnBox">
+    <button id="preOrderBtn">前序遍历</button>
+    <button id="inOrderBtn">中序遍历</button>
+    <button id="ptOrderBtn">后序遍历</button>
+</div>
+<main id="nodeTree">
+    <div class="left">
+        <div class="left">
+            <div class="left"></div>
+            <div class="righ"></div>
+        </div>
+        <div class="righ">
+            <div class="left"></div>
+            <div class="righ"></div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="left">
+            <div class="left"></div>
+            <div class="righ"></div>
+        </div>
+        <div class="righ">
+            <div class="left"></div>
+            <div class="righ"></div>
+        </div>
+    </div>
+</main>
+
+<script src="event.js"></script>
+<script src="app.js"></script>
+<script>
+    window.onload = function () {
+        /*var nums = new BST();
+         nums.insert(23);
+         nums.insert(45);
+         nums.insert(16);
+         nums.insert(37);
+         nums.insert(3);
+         nums.insert(99);
+         nums.insert(22);
+         print('Inorder traversal:');
+         inOrder(nums.root);*/
+    };
+</script>
+</body>
+</html>

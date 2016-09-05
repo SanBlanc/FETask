@@ -1,0 +1,303 @@
+@charset "utf-8";
+@import 'variables';
+@import "mixin";
+
+body{
+  width:$global_width;
+  margin:0 auto;
+  padding:0 48px;
+}
+
+//header
+header{
+  width:100%;
+  height:$header_height;
+  border-bottom:3px solid $header_border_btm_color;
+  overflow: hidden;
+
+  h1{
+    text-align: center;
+    height: 100%;
+    float: left;
+    width:$header_logo_width;
+    color:$header_logo_color;
+    background-color: $header_logo_bgc;
+  }
+  span{
+    color: $header_logo_bgc;
+    float: right;
+  }
+  h1,span{
+    padding-top: 40px;
+  }
+}
+//footer
+footer{
+  height:$footer_height;
+  border-top: 1px solid $footer_border_color;
+  color:$footer_color;
+  text-align: right;
+}
+
+//main
+main{
+  min-height: 350px;
+  width:100%;
+  margin:32px 0;
+
+  .banner_img{
+    width:640px;
+    height:300px;
+    display: inline-block;
+    background: url("../img/banner-img.png") center center no-repeat;
+    .mask_img{
+      background-color: rgba(0,0,0,.2);
+      height: 100%;
+      display: inline-block;
+      width:100%;
+      font-size: 0;
+      letter-spacing: -4px;
+    }
+    .mask_left{
+      width:192px;
+      height: 100%;
+      display: inline-block;
+      background-color: rgba($main_green, .5);
+    }
+    .mask_right{
+      width:192px;
+      height: 100%;
+      display: inline-block;
+      background-color: rgba($main_red,.5);
+      margin-left: calc(100% - 192px - 192px);
+    }
+  }
+  .ad_info{
+    vertical-align: top;
+    width:204px;
+    display: inline-block;
+    height: 300px;
+    margin-left: 40px;
+    h3,small,p{@include inline_block_clear;}
+    h3{
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin:.3rem 0;
+      text-decoration: underline;
+      &::first-letter{font-size: 1.8rem;}
+    }
+    overflow: hidden;
+    small{
+      display: block;
+      font-style: italic;
+      font-size: .8rem;
+    }
+    .ad_num{
+      margin:{
+        top:1rem;
+        left: -.5rem;
+        right:0;
+        bottom:.5rem;
+      }
+      font-size: 7.6rem;
+      font-weight: bold;
+      font-style: italic;
+      color:$main_green;
+    }
+    .ad_min_num{
+      color:$main_red;
+      font-size: 4rem;
+      float: left;
+    }
+    .ad_min_num_2{
+      //display: inline-block;
+      float: left;
+      color: $main_red;
+      font-size: 1.6rem;
+      padding-top:12px;
+      span{
+        font-size: .8rem;
+        color:#999;
+        display: block;
+        margin-top:4px;
+      }
+    }
+  }
+
+  .list_info{
+    margin-top: 38px;
+    width:640px;
+    min-height: 180px;
+
+    @include inline_block;
+    div:not(:last-of-type){
+      margin-right: 28px;
+    }
+    div{width:calc((100% - 56px)/3);height: 180px;display: inline-block;vertical-align: top;overflow: hidden}
+    h3,p,li{@include inline_block_clear;line-height: 1.5;}
+
+    h3{
+      text-decoration: underline;
+    }
+    p{
+      font-size: 14px;
+      margin-top: 12px;
+    }
+    .left_item{h3{color:$main_green;}}
+    .middle_item{h3{color:#D3994F;}}
+    .right_item{h3{color:$main_red;}
+      p,li{font-size: 12px;}
+      ul{margin-top: 6px;}
+      li{line-height:2;}
+      span{color:$main_red;font-style: italic;}
+    }
+  }
+
+  @include inline_block;
+
+  article,section{
+    width:calc((100% - 20px)/2);
+    height: 608px;
+    overflow: hidden;
+    display: inline-block;
+    @include  inline_block_clear;
+    vertical-align: top;margin-top: 48px;
+  }
+  article{
+    margin-right: 20px;
+    h2{
+      font-size: 2.4rem;
+      color:$main_article_blue;
+      letter-spacing: -2px;
+      span{
+        font-size:3.6rem;
+        color:$main_article_yellow;
+        font-style: italic;
+      }
+    }
+    h3{
+      border-bottom:2px solid $main_article_blue;
+      color:$main_article_blue;
+      font-size: 1.8rem;
+      line-height: 2;
+    }
+    img{float: right;margin:{
+      top:8px;
+      left:8px;
+      bottom:4px;
+    }}
+    p{line-height: 1.5;font-size: 12px;}
+    p:not(:first-of-type){
+      text-indent: 2em;
+      margin-top: 12px;
+    }
+    p:first-of-type{margin-top: 1rem;}
+    p:first-of-type::first-letter{
+      font-size: 4rem;
+      float: left;
+      margin-top: 2px;
+      margin-right: 2px;
+      color:$main_article_yellow;
+    }
+  }
+
+
+
+  section{
+    .sect-img{
+      width: 100%;
+      overflow: hidden;
+      height: 256px;
+      background: url("../img/section-img.png") center center no-repeat;
+      .dark_mask{
+        width: 100%;
+        height:60px;
+        margin-top: calc(256px - 60px);
+        background-color: rgba(0, 0, 0, .4);
+        h2{margin-left: 32px;text-indent: 1rem;border-left: 3px solid $main_green;color:#ffffff;display: inline-block;line-height: 1.5;font-size: 1.6rem;margin-top: 1rem;}
+        h3{font-style:italic;color:$main_green;display: inline-block;}
+      }
+
+    }
+    .sect-btm{
+      margin-top: 30px;
+      background-color: $main_sect_pink;
+    }
+    ul{
+      overflow: visible;
+      padding-left: 40px;
+      padding-top:4px;
+      padding-bottom:4px;
+
+      list-style:disc;
+
+      li{line-height: 2;font-size: 16px;margin:.6rem 0;}
+    }
+    .sect-ad{
+      margin-top: 0;
+      height: 180px;
+      width: 60%;
+      display: inline-block;
+      background-color: $main_red;
+    }
+    .sect-ad-txt{
+      width:38%;
+      display: inline-block;
+      vertical-align: top;
+      padding:16px;
+      text-align: justify;
+      font-size: 16px;
+      line-height: 1.2;
+      margin-top: -8px;
+      span{
+        font-size:2.4rem;
+        color:$main_red;
+        font-weight: bold;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        display: inline-block;
+        height:1rem;
+        margin-top: -4px;
+        &:first-of-type{float: left;margin-right: .5rem;}
+        &:last-of-type{float: right;}
+      }
+
+    }
+
+    .sect-ad{
+      color:#fff;
+      .ad_lft,.ad_rit{float: left;margin-top:36px;}
+      .ad_lft{
+        font-size: 9rem;
+        line-height: .8;
+        color:#fff;
+        padding:0 6px;
+        border-right:2px solid #fff;
+      }
+      .ad_rit{
+        max-width: 158px;
+        padding-top: .2rem;
+        padding-left: .5rem;
+        h4{
+          //padding-top: .5rem;
+          font-style: italic;
+          font-size: 1.3rem;
+          font-weight: normal;
+          line-height: 1.2;
+        }
+        small{
+          font-size: .8rem;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+

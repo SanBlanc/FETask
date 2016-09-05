@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任务三：三栏式布局</title>
+    <link rel="stylesheet" href="../../assets/reset.css">
+    <style>
+        .logo {
+            width: 80px;
+            height: 80px;
+            outline: 1px solid #999;
+            background-color: #eeeeee;
+            font-size: 14px;
+            letter-spacing: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+
+        .cont-box {
+            outline: 1px solid #999;
+            background-color: #eeeeee;
+            overflow: hidden;
+            padding: 20px;
+            font-size: 12px;
+        }
+
+        .left, .middle, .right {
+            outline: 1px solid #999;
+            padding: 20px;
+            background-color: #fff;
+            vertical-align: top;
+        }
+        .left{width:200px;font-size: 0;
+            letter-spacing: -3px;}
+        .right{width:120px;}
+        .right div:not(:last-of-type) {
+            margin-bottom: 20px;
+        }
+        .left .logo {
+            display: inline-block;
+        }
+        .left span {
+            font-size: 14px;
+            letter-spacing: 0;
+            vertical-align: top;
+            margin-left: 20px;
+        }
+        .middle {
+            /*width: calc(100% - 400px);*/
+            width:calc(100% - 360px);/*排除两边的margin，全部用浮动*/
+            /*margin-left: 240px;*/
+            margin-left:20px;
+            margin-right:20px;
+
+            line-height: 1.5;
+            font-size: 16px;
+        }
+
+        .middle p:not(:first-of-type) {
+            margin-top: 10px;
+        }
+
+        /*使用浮动*/
+        /*.left,.middle,.right{float: left;}*/
+
+        /*使用inline-block*/
+        .left,.middle,.right{display: inline-block;font-size: 16px;letter-spacing: 0;}
+        .cont-box{font-size: 0;letter-spacing: -3px;}
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="cont-box">
+        <div class="left">
+            <div class="logo">团队logo 80*80</div>
+            <span>团队名称</span>
+        </div>
+
+        <div class="middle">
+            <p>引言</p>
+            <p>
+                说到函数式编程，大家可能第一印象都是学院派的那些晦涩难懂的代码，充满了一大堆抽象的不知所云的符号，似乎只有大学里的计算机教授才会使用这些东西。在曾经的某个时代可能确实如此，但是近年来随着技术的发展，函数式编程已经在实际生产中发挥巨大的作用了，越来越多的语言开始加入闭包，匿名函数等非常典型的函数式编程的特性，从某种程度上来讲，函数式编程正在逐步“同化”命令式编程。</p>
+            <p>JavaScript
+                作为一种典型的多范式编程语言，这两年随着React的火热，函数式编程的概念也开始流行起来，RxJS、cycleJS、lodashJS、underscoreJS等多种开源库都使用了函数式的特性。所以下面介绍一些函数式编程的知识和概念。</p>
+            <p>
+                说到函数式编程，大家可能第一印象都是学院派的那些晦涩难懂的代码，充满了一大堆抽象的不知所云的符号，似乎只有大学里的计算机教授才会使用这些东西。在曾经的某个时代可能确实如此，但是近年来随着技术的发展，函数式编程已经在实际生产中发挥巨大的作用了，越来越多的语言开始加入闭包，匿名函数等非常典型的函数式编程的特性，从某种程度上来讲，函数式编程正在逐步“同化”命令式编程。</p>
+            <p>JavaScript
+                作为一种典型的多范式编程语言，这两年随着React的火热，函数式编程的概念也开始流行起来，RxJS、cycleJS、lodashJS、underscoreJS等多种开源库都使用了函数式的特性。所以下面介绍一些函数式编程的知识和概念。</p>
+        </div>
+        <div class="right">
+            <div class="logo">团队logo 80*80</div>
+            <div class="logo">团队logo 80*80</div>
+            <div class="logo">团队logo 80*80</div>
+            <div class="logo">团队logo 80*80</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

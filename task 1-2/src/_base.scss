@@ -1,0 +1,52 @@
+@charset "UTF-8";
+// @mixin的调用方式是@include，拷贝
+// %的调用方式是@extend，组合声明，占位符
+// function，包括内置函数，直接调用
+
+//使用flex 让父容器中的项目元素居中
+@mixin flex-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+//清除浮动
+@mixin clearfix{
+    *zoom:1;
+    &:before,
+    &:after{
+        display: table;
+        content:"";
+    }
+    &:after{
+        clear:both;
+        overflow:hidden;
+    }
+}
+
+//居中
+@mixin center-box($direction: both) {
+    position: absolute;
+    @if $direction == both {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate3d(-50%, -50%, 0);
+        transform: translate3d(-50%, -50%, 0);
+    }
+    @else if $direction == horizontal {
+        left: 50%;
+        -webkit-transform: translate3d(-50%, 0, 0);
+        transform: translate3d(-50%, 0, 0);
+    }
+    @else if $direction == vertical {
+        top: 50%;
+        -webkit-transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%, 0);
+    }
+}
+
+
+/* function
+*/
+@function calc-width($col-span){
+    @return (100% / $col-span);
+}

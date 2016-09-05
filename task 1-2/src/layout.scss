@@ -1,0 +1,221 @@
+@charset "utf-8";
+@import 'base';
+@import "variables";
+
+//header
+header {
+  max-height: $header_height;
+  background-color: $header_bgc;
+  padding: 0 calc(4% / 2); //center
+  overflow: hidden;
+  font-size: $global_font-size;
+
+  h1 {
+    min-width: $header_logo_width;
+    min-height: $header_height;
+    display: inline-block;
+    background: url("../img/baidu.png") left center no-repeat;
+  }
+  nav {
+    float: right;
+    a {
+      line-height: $header_height;
+      color: $header_def_color;
+      &:not(:first-child) {
+        margin-left: $global_font-size;
+      }
+      &:last-child {
+        color: $header_visited_color;
+        text-decoration: underline;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+  }
+}
+
+//footer
+footer {
+  min-height: $footer_height;
+  padding: 0 calc(4% / 2);
+  color: $footer_def_color;
+  background-color: $footer_bgc;
+  line-height: $footer_height;
+  text-align: center;
+  font-size: $global_font-size;
+
+}
+
+//main
+main {
+  overflow: hidden;
+  padding: 32px calc(4% / 2);
+  background-color: #DEDEDE;
+
+  //public
+  img {
+    max-width: 200px;
+  }
+  article, aside {
+    background-color: $main_article_bgc;
+    padding: 20px;
+    outline: 1px solid $main_border_color;
+  }
+  article {
+    margin-bottom: 20px;
+  }
+  small {
+    display: block;
+  }
+  a {
+    color: $main_a_color;
+    text-decoration: underline;
+  }
+  img {
+    margin: {
+      left: 0;
+      bottom: 10px;
+      top: 10px;
+      right: 10px;
+    }
+  }
+  h2 {
+    line-height: 2;
+    font-size: 18px;
+    color: $main_h2_color;
+    margin: 8px 0;
+  }
+  h3 {
+    line-height: 1.5;
+    font-size: 16px;
+    margin-bottom: 6px;
+    color: $main_h3_color;
+  }
+  small {
+    color: lighten($main_h3_color, 10%);
+    margin-bottom: 12px;
+  }
+  p {
+    text-indent: 2em;
+    line-height: 1.5;
+  }
+  ul li {
+    text-indent: 2em;
+    line-height: 1.5;
+  }
+
+  dl {
+    outline: 1px solid $main_border_color;
+    width: 220px;
+    text-align: center;
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+
+    img {
+      margin-left: 10px;
+    }
+    dt {
+      padding-top: 10px;
+    }
+  }
+
+  article:last-of-type {
+    line-height: 1.5;
+    p {
+      text-indent: 0;
+    }
+    ol {
+      list-style-type: decimal;
+      margin-left: 2em;
+    }
+    table {
+      width: 100%;
+      th {
+        background-color: $main_h2_color;
+        color: #ffffff;
+      }
+      border-collapse: collapse; //合并边框线
+      td, th {
+        text-align: left;
+        border: 1px solid $main_border_color;
+        line-height: 2;
+        padding-left: .5em;
+      }
+      tr:last-of-type td {
+        background-color: #CCCCCC;
+        font-weight: bold;
+      }
+    }
+  }
+
+  aside {
+    h2 {
+      margin-top: 0;
+      text-indent: 2em;
+      border-left: 5px solid $main_border_color;
+    }
+    small{
+      margin-bottom:0;
+    }
+    form {
+      textarea {
+        resize: none;
+      }
+
+      input[type="submit"] {
+        font-size: 16px;
+        width: 100%;
+        border-radius: 6px;
+        height: 36px;
+        line-height: 32px;
+        background-color: $btn_bg_color;
+        color: #ffffff;
+        letter-spacing: 2px;
+        &:hover {
+          background-color: lighten($btn_bg_color, 10%);
+          //background-color: darken($btn_bg_color,10%);
+        }
+      }
+        font-size: 0;
+        letter-spacing: -3px;
+        label,select,input,small{
+          font-size: 14px;
+          letter-spacing: 0;
+          line-height: 1.5;
+
+        }
+      small{
+        margin-left:calc(30% + 10px);
+      }
+        label{
+          display:inline-block;
+          width:30%;
+          text-align: right;
+          font-size: 14px;
+          letter-spacing: 0;
+          &:not(:first-of-type){
+            margin-top: 10px;
+          }
+          margin-right:10px;
+        }
+      textarea{width:30%;vertical-align:top;margin-top: 10px;margin-bottom: 10px;}
+      .txt-lb{display: inline;margin-left: .2em;}
+      input[type="text"]{
+        padding:{
+          top:.2em;
+          right:0;
+          bottom:.2em;
+          left:.2em;
+        }
+      }
+
+
+
+    }
+  }
+
+}
+

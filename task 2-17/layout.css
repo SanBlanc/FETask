@@ -1,0 +1,20 @@
+ul, li {
+  marign: 0;
+  padding: 0; }
+
+.chart {
+  font-size: 0;
+  width: 1000px;
+  height: 600px;
+  min-height: min-content;
+  margin: 50px auto;
+  background-color: #dcdcdc; }
+
+.chart-item {
+  display: inline-block; }
+
+.aqi-chart-wrap {
+  width: 90%;
+  margin: 50px auto; }
+
+/*# sourceMappingURL=layout.css.map */

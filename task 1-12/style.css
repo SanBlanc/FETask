@@ -1,0 +1,85 @@
+/* variables 
+* map-get($map,$key)
+*/
+/* placeholder  @extend
+*/
+/* mixin   @include
+*/
+/* function
+*/
+table {
+  min-width: 50%;
+  margin: 0 auto; }
+  table th {
+    background-color: #000000;
+    color: #ffffff; }
+  table tr:nth-of-type(-n+4) {
+    color: #ff0000; }
+  table tr:nth-of-type(even) {
+    background-color: #CCCCCC; }
+
+input {
+  margin-top: 2rem;
+  border: 1px solid #dcdcdc;
+  width: 6rem;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, 0, 0);
+  transform: translate3d(-50%, 0, 0);
+  transition: all .5s ease; }
+  input:focus {
+    border-color: cornflowerblue;
+    width: 8rem; }
+
+.banner-self {
+  width: 16rem;
+  height: 9rem;
+  margin: 4rem auto;
+  position: relative;
+  overflow: hidden; }
+  .banner-self .container {
+    position: relative;
+    width: 300%;
+    height: 100%;
+    font-size: 0;
+    transition: 0.5s left; }
+    .banner-self .container li {
+      display: inline-block;
+      width: 33.33333%;
+      height: 100%;
+      font-size: 1rem;
+      text-align: center;
+      line-height: 9rem;
+      color: #ffffff; }
+      .banner-self .container li:first-of-type {
+        background-color: #843534; }
+      .banner-self .container li:nth-of-type(2) {
+        background-color: #67b168; }
+      .banner-self .container li:last-of-type {
+        background-color: #d9534f; }
+  .banner-self #slide1:target ~ .container {
+    left: 0; }
+  .banner-self #slide2:target ~ .container {
+    left: -100%; }
+  .banner-self #slide3:target ~ .container {
+    left: -200%; }
+  .banner-self .controller {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 4.5rem;
+    height: 1.5rem;
+    font-size: 0;
+    background-color: rgba(255, 255, 255, 0.3); }
+    .banner-self .controller a {
+      display: inline-block;
+      width: 1.5rem;
+      height: 1.5rem;
+      line-height: 1.5rem;
+      color: #ffffff;
+      font-size: 1rem;
+      text-align: center; }
+      .banner-self .controller a:hover {
+        background-color: #31b0d5; }
+
+/*# sourceMappingURL=style.css.map */

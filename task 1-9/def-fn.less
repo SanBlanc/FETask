@@ -1,0 +1,47 @@
+//定义重用方法
+
+/* css书写顺序
+1.位置属性(position, top, right, z-index, display, float等)
+2.大小(width, height, padding, margin)
+3.文字系列(font, line-height, letter-spacing, color- text-align等)
+4.背景(background, border等)
+5.其他(animation, transition等)
+*/
+
+
+//定义margin
+.margin-lf(@lt:10px){margin-left: @lt;}
+.margin-rt(@rt:10px){margin-right: @rt;}
+.margin-tp(@tp:10px;){margin-top:@tp;}
+.margin-btm(@btm:10px;){margin-bottom:@btm;}
+//定义padding
+.padding-lf(@lt:10px){padding-left: @lt;}
+.padding-rt(@rt:10px){padding-right: @rt;}
+.padding-tp(@tp:10px;){padding-top:@tp;}
+.padding-btm(@btm:10px;){padding-bottom:@btm;}
+//定义字体，大小，颜色
+.font-heit(@size:12px,@colr:#000){font-family: "黑体" sans-serif;font-size: @size;color: @colr;}
+.font-songt(@size:12px,@colr:#000){font-family: "宋体" serif;font-size: @size;color: @colr;}
+.font-yahei(@size:12px,@colr:#000){font-family: "微软雅黑" serif;font-size: @size;color: @colr;}
+
+//设置宽高
+.set-wid(@wid){width: @wid;}
+.set-hei(@hei){height: @hei;}
+
+//float
+.fl{float:left;}
+.fr{float:right;}
+
+
+//清除浮动
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  clear: both;
+  content: "";
+}
+.clearfix {
+  zoom: 1;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任务二十三：JavaScript和树（二）</title>
+    <style>
+        html, body {
+            margin: 0;
+            box-sizing: border-box;
+            padding: 1rem 1rem;
+        }
+
+        .btnBox {
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            /*justify-content: center;!*水平居中*!*/
+            /*align-items: center;!*垂直居中*!*/
+            outline: 2px solid #1b6d85;
+            flex-wrap: wrap;
+            text-indent: .2rem;
+        }
+
+        main div {
+            flex-basis: 92%;
+            display: inline-flex;
+            outline: 1px solid #1b6d85;
+            margin: 15px 10px;
+            background-color: #fff;
+            min-height: 4rem;
+        }
+    </style>
+</head>
+<body>
+<!--基于任务22，参考示例图，将二叉树变成了多叉树，并且每一个节点中带有内容
+提供一个按钮，显示开始遍历，点击后，以动画的形式呈现遍历的过程
+当前被遍历到的节点做一个特殊显示（比如不同的颜色）
+每隔一段时间（500ms，1s等时间自定）再遍历下一个节点
+增加一个输入框及一个“查询”按钮，点击按钮时，开始在树中以动画形式查找节点内容和输入框中内容一致的节点，找到后以特殊样式显示该节点，找不到的话给出找不到的提示。查询过程中的展示过程和遍历过程保持一致-->
+广度优先还没有完成！！
+
+<div class="btnBox">
+    <button id="depthTraversal">深度优先遍历</button>
+    <button id="scopeTraversal">广度优先遍历</button>
+    <input type="text" id="keySearch">
+    <button id="depthSearch">深度优先搜索</button>
+    <button id="scopeSearch">广度优先搜索</button>
+</div>
+
+<main id="root">
+    Super
+    <div>
+        Cat
+        <div>
+            Apple
+            <div>Pear</div>
+            <div>Pig</div>
+            <div>Cola</div>
+            <div>Soccer</div>
+        </div>
+        <div>Phone</div>
+        <div>
+            <div>Book</div>
+            <div>School</div>
+        </div>
+    </div>
+    <div>
+        Note
+        <div>
+            Human
+            <div>Code</div>
+            <div>Operate</div>
+            <div>Man</div>
+        </div>
+        <div>
+            Program
+            <div>
+                Bement
+                <div>Cat</div>
+            </div>
+            <div>Glass</div>
+        </div>
+    </div>
+    <div>Fish</div>
+</main>
+
+<script src="event.js"></script>
+<script src="app.js"></script>
+<script>
+
+</script>
+</body>
+</html>

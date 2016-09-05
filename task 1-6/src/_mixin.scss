@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+@mixin inline_block_clear{
+  font-size: 1rem;
+  letter-spacing:0;
+}
+@mixin inline_block{
+  font-size: 0;
+  letter-spacing: -5px;
+}
